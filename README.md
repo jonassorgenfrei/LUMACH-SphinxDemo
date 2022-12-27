@@ -3,29 +3,28 @@ Based on: Sphinx Tutorial:
 https://www.sphinx-doc.org/en/master/tutorial/index.html
 
 ## To Start
-On windows run: 
+On *Windows* run: 
 
-Install virtualenv if not installed:
 ```
+# Install virtualenv if not installed:
 pip install virtualenv
 
-cd my-project
-virtualenv --python C:\Path\To\Python\python.exe venv
-```
-
-Start Venv
-```
-# on windows
-pip install virtualenv
 virtualenv --python C:\Path\To\Python\python.exe .venv
+# for rights in the powershell
 Set-ExecutionPolicy Unrestricted -Scope Process
 .\.venv\Scripts\activate
 
-# on linux 
+# install requirments
+# freeze requirements: pip freeze > requirements.txt
+pip install -r requirements.txt
+```
+
+On *Linux* run: 
+```
 virtualenv --python python3.6 .venv
 source .venv/bin/activate
 
-# windows and linux install requirments
+# install requirments
 # freeze requirements: pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
