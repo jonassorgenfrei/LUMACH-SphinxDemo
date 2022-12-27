@@ -76,7 +76,7 @@ class MyClass3():
         self.ref = ref
 
 class MyClass4():
-    """Summary of class3 here.
+    """Summary of class4 here.
 
     Longer class information...
     Longer class information...
@@ -86,6 +86,21 @@ class MyClass4():
     """
 
     def __init__(self, ref: MyClass):
+        """Inits SampleClass with blah.
+        """
+        self.ref = ref
+
+class MyClass5():
+    """Summary of class5 here.
+
+    Longer class information...
+    Longer class information...
+
+    Attributes:
+        ref: A refernce to MyClass4
+    """
+
+    def __init__(self, ref: MyClass4):
         """Inits SampleClass with blah.
         """
         self.ref = ref
