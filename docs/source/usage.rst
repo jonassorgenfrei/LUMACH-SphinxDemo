@@ -51,3 +51,17 @@ will raise an exception.
    A typedef-like declaration of a type.
 
 Cross reference to :cpp:type:`CustomList`.
+
+.. autoclass:: lumache.MyClass
+   :members:
+
+.. autoclass:: lumache.MyClass2
+   :show-inheritance:
+   :members:
+   :inherited-members:
+
+.. autoclass:: lumache.MyClass3
+   :members:
+
+.. autoclass:: lumache.MyClass4
+   :members:

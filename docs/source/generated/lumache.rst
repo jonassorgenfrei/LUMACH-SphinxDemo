@@ -19,6 +19,15 @@
 
    
    
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      MyClass
+      MyClass2
+      MyClass3
+      MyClass4
+   
    
 
    
