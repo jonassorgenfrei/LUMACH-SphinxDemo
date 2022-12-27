@@ -27,6 +27,7 @@
       MyClass2
       MyClass3
       MyClass4
+      MyClass5
    
    
 
