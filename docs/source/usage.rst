@@ -65,3 +65,6 @@ Cross reference to :cpp:type:`CustomList`.
 
 .. autoclass:: lumache.MyClass4
    :members:
+
+.. autoclass:: lumache.MyClass5
+   :members:
