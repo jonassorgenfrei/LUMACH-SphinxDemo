@@ -20,6 +20,8 @@ Contents
 
    usage
    api
+   readme
+   todos
 
 
 Extensions
@@ -29,3 +31,4 @@ Some Text here
 .. helloworld::
 
 Some Text here
+

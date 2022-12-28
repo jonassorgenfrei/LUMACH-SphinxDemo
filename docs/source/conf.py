@@ -34,8 +34,10 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.napoleon',
+    'm2r2',
     # custom extension
-    'helloworld'
+    'helloworld',
+    'todo'
 ]
 
 templates_path = ['_templates']
@@ -56,3 +58,6 @@ html_static_path = ['_static']
 
 # -- EPUB options -------------------------------------------------
 epub_show_urls = 'footnote'
+
+# -- TODO options -------------------------------------------------
+todo_include_todos = True
