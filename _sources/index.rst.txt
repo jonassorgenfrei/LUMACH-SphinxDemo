@@ -20,3 +20,12 @@ Contents
 
    usage
    api
+
+
+Extensions
+----------
+Some Text here
+
+.. helloworld::
+
+Some Text here
