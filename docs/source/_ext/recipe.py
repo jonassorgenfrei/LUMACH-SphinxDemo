@@ -210,7 +210,6 @@ class RecipeDomain(Domain):
 
 def setup(app):
     # only register domain, as the directives and role are register inside of the RecipeDomain
-    app.add_directive('recipe', RecipeDirective)
     app.add_domain(RecipeDomain)
     return {
         "version": "0.1",
