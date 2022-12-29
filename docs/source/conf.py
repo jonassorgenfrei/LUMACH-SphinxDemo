@@ -34,16 +34,24 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.napoleon',
+    'sphinx.ext.viewcode',
     'm2r2',
     # custom extension
     'helloworld',
-    'todo'
+    'todo',
+    'recipe',
+    'autodoc_intenum'
 ]
 
 templates_path = ['_templates']
 exclude_patterns = []
 
+# Add the custom indices to the list of indices
+html_use_index = True
+html_domain_indices = True
 
+# Set the index to be the RecipeIndex
+#primary_domain = "recipe"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

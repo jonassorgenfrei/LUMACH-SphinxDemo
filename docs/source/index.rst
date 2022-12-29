@@ -32,3 +32,15 @@ Some Text here
 
 Some Text here
 
+Joe's Recipes
+=============
+
+Below are a collection of my favourite recipes. I highly recommend the
+:recipe:ref:`TomatoSoup` recipe in particular!
+
+.. toctree::
+   :maxdepth: 2
+
+   recipes
+
+.. autointenum:: my_enums.Colors
