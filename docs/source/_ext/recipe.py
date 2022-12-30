@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+from docutils import nodes
 from docutils.parsers.rst import directives
 from sphinx import addnodes
 from sphinx.directives import ObjectDescription
@@ -30,10 +31,9 @@ class RecipeDirective(ObjectDescription):
         Returns:
             _type_: _description_
         """
-        signode += addnodes.desc_name(text=sig)
-        if "contains" in self.options:
-            signode += addnodes.desc_annotation(text=" Ingredients: {}".format(self.options.get("contains")))
+        signode += addnodes.desc_name(text=sig)     
         return sig
+    
 
     def add_target_and_index(self, name_cls, sig, signode):
         """Adds a target (to link to) and an entry to the index for this node.
@@ -49,6 +49,11 @@ class RecipeDirective(ObjectDescription):
             recipes = self.env.get_domain("recipe")
             recipes.add_recipe(sig, ingredients)
 
+    def transform_content(self, contentnode: addnodes.desc_content) -> None:
+        if "contains" in self.options:
+            paragraph_node = nodes.paragraph(text="Ingredients: {}".format(self.options.get("contains")))
+            contentnode.insert(0, paragraph_node)
+        
 
 class IngredientIndex(Index):
     """A custom index that creates an ingredient matrix."""
@@ -203,7 +208,6 @@ class RecipeDomain(Domain):
         name = f"recipe.{signature}"
         anchor = f"recipe-{signature}"
         self.data["recipe_ingredients"][name] = ingredients
-
         # name, dispname, type, docname, anchor, priority
         self.data["recipes"].append(
             (name, signature, "Recipe", self.env.docname, anchor, 0)
