@@ -31,6 +31,8 @@ class RecipeDirective(ObjectDescription):
             _type_: _description_
         """
         signode += addnodes.desc_name(text=sig)
+        if "contains" in self.options:
+            signode += addnodes.desc_annotation(text=" Ingredients: {}".format(self.options.get("contains")))
         return sig
 
     def add_target_and_index(self, name_cls, sig, signode):
